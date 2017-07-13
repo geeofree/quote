@@ -15,7 +15,7 @@ class TweetBtn extends Component {
   render() {
     const { clickHandler} = this
     const { quote } = this.props
-    const tweetURL = quote && `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote.data.quote)}`
+    const tweetURL = quote.status && `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote.data.quote)}`
 
     return (
       <a href={tweetURL} target="_blank" onClick={clickHandler}>
