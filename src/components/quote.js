@@ -16,7 +16,6 @@ class Quote extends Component {
       toggleFetch(false)
     })
     .catch(error => {
-      console.log(error.response)
       dataReceived(error.response.status, error.response.data)
       toggleFetch(false)
     })
