@@ -1,7 +1,7 @@
 import React from 'react'
 
 const AppLayout = () => (
-  <div className="app" />
+  <div id="app" />
 )
 
 export default AppLayout
