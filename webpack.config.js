@@ -17,7 +17,7 @@ module.exports = {
       {
         test: /\.s(a|c)ss$/,
         include: __dirname + '/src',
-        use: ExtractTextPlugin.extract(['sass-loader', 'css-loader', 'postcss-loader'])
+        use: ExtractTextPlugin.extract(['css-loader', 'postcss-loader', 'sass-loader'])
       }
     ]
   },
