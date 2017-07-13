@@ -1,9 +1,9 @@
-export const requestQuote = (status, fetching) => ({
-  type: 'FETCH_REQUEST',
-  payload: { status, fetching }
+export const fetchingQuote = (fetching) => ({
+  type: 'IS_FETCHING',
+  payload: fetching
 })
 
-export const showQuote = (quote) => ({
-  type: 'SHOW_QUOTE',
-  payload: quote
+export const dataReceived = (status, data) => ({
+  type: 'RESPONSE_RECEIVED',
+  payload: { status, data }
 })
