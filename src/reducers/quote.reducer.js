@@ -1,16 +1,16 @@
 const InitialState = {
-  fetch: { status: null, fetching: false, response: null },
-  quote: {}
+  isFetching: false,
+  quote: { status: null, data: null }
 }
 
 const QuoteReducer = (state=InitialState, action) => {
   const assign = (value) => Object.assign({}, state, value)
 
   switch(action.type) {
-    case "FETCH_REQUEST":
-      return assign(action.payload)
-    case "SHOW_QUOTE":
-      return assign(action.payload)
+    case "IS_FETCHING":
+      return assign({ isFetching: action.payload })
+    case "RESPONSE_RECEIVED":
+      return assign({ quote: action.payload })
     default:
       return state
   }
