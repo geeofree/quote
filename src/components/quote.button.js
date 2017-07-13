@@ -32,7 +32,7 @@ class NewQuoteBtn extends Component {
 
   render() {
     const { clickHandler } = this
-    return <button className="new-quote-button" onClick={clickHandler}>Change</button>
+    return <button className="new-quote-button" onClick={clickHandler}>New Quote</button>
   }
 }
 
