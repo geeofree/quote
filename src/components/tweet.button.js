@@ -9,7 +9,7 @@ class TweetBtn extends Component {
   }
 
   clickHandler(e) {
-    if(this.props.isFetching) e.preventdefault
+    if(this.props.isFetching) e.preventDefault()
   }
 
   render() {
