@@ -1,8 +1,11 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleWare } from 'redux'
+import QuoteReducer from './reducers/quote.reducer'
 
-function testReducer(state={}, action) {
-  return state
+const logger = (store) => (next) => (action) => {
+  console.log('Dispatching action:', action)
+  next(action)
 }
 
-const appState = createStore(testReducer)
+const middleware =  applyMiddleWare(logger)
+const appState = createStore(QuoteReducer, {}, middleware)
 export default appState
