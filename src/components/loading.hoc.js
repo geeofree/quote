@@ -4,6 +4,12 @@ import { fetchingQuote, dataReceived } from '../actions/quote.action'
 import request from '../api.request'
 
 
+const LoadingIcon = () => (
+  <div className="loader-wrapper">
+    <div className="loading" />
+  </div>
+)
+
 const LoadingHOC = (WrappedComponent) => {
   class Loader extends Component {
     componentWillMount() {
@@ -25,7 +31,7 @@ const LoadingHOC = (WrappedComponent) => {
 
     render() {
       const { isFetching } = this.props
-      return isFetching ? <p>Loading...</p> : <WrappedComponent {...this.props} />
+      return isFetching ? <LoadingIcon /> : <WrappedComponent {...this.props} />
     }
   }
 
