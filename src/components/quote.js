@@ -6,9 +6,9 @@ const Quote = ({ quote }) => {
   if(quote) {
     if(quote.status === 200) {
       return (
-        <div>
-          <p>{quote.data.quote}</p>
-          <p>{quote.data.author}</p>
+        <div className="quote-wrapper">
+          <p className="quote">{quote.data.quote}</p>
+          <p className="author">&#8212;{quote.data.author}</p>
         </div>
       )
     }
