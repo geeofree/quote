@@ -1,4 +1,4 @@
-import { createStore, applyMiddleWare } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import QuoteReducer from './reducers/quote.reducer'
 
 const logger = (store) => (next) => (action) => {
@@ -6,6 +6,6 @@ const logger = (store) => (next) => (action) => {
   next(action)
 }
 
-const middleware =  applyMiddleWare(logger)
+const middleware =  applyMiddleware(logger)
 const appState = createStore(QuoteReducer, {}, middleware)
 export default appState
