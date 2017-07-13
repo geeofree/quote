@@ -1,5 +1,5 @@
 const InitialState = {
-  fetch: { status: null, fetching: false },
+  fetch: { status: null, fetching: false, response: null },
   quote: {}
 }
 
